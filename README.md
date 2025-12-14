@@ -97,7 +97,7 @@ KAFKA_BROKERS=localhost:9092
 - [x] RedisModule
 - [x] Cache em leituras
 - [x] Invalidação automática
-- [x] TTL (1 hora)
+- [x] TTL
 
 ### 8. Mensageria (Kafka)
 
@@ -110,7 +110,6 @@ KAFKA_BROKERS=localhost:9092
 
 - [x] Swagger configurado
 - [x] Endpoints documentados
-- [x] Schemas documentados
 
 ### 10. Testes Unitários
 
@@ -122,7 +121,6 @@ KAFKA_BROKERS=localhost:9092
 
 - [x] Fluxos completos
 - [x] Validações
-- [x] Supertest
 
 ### 12. Docker
 
@@ -133,15 +131,6 @@ KAFKA_BROKERS=localhost:9092
 ### 13. Documentação
 
 - [x] README.md
-- [x] ARCHITECTURE.md
-- [x] CONTRIBUTING.md
-- [x] QUICKSTART.md
-
-### Extras
-
-- [x] Makefile
-- [x] Script de deploy
-- [x] Conventional Commits
 
 ---
 
