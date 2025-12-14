@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  address   String?
+  phone     String?
+  
+  profilePicture String?
+  
+  bankingDetails BankingDetails?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("users")
+}
+
+model BankingDetails {
+  id            String @id @default(uuid())
+  userId        String @unique
+  accountNumber String
+  branch        String
+  bankName      String
+  accountType   String @default("CHECKING") // CHECKING or SAVINGS
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("banking_details")
+}
